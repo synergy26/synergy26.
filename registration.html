@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SYNERGY 2K26 Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+  *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+  background:#1ebe5d;
+}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+  overflow-x:hidden;
+  text-align:center;
+}
+/* PERFECT FULLSCREEN VIDEO */
+video{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+  z-index:-2;
+  filter:brightness(0.8);
+}
+
+
+/* Dark overlay */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.75);
+  z-index:-1;
+}
+video{
+  filter:brightness(0.8);
+}
+
+
+
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  z-index:-1;
+}
+
+.header{
+  padding-top:40px;
+}
+
+.header img{
+  width:150px;
+  display:block;
+  margin:0 auto;
+  background:transparent;
+  border:none;
+}
+
+
+.header h1{
+  font-family:'Orbitron';
+  font-size:48px;
+  color:#00e5ff;
+  letter-spacing:6px;
+  margin:20px 0;
+}
+
+.rule-btn{
+  display:inline-block;
+  padding:10px 25px;
+  border:2px solid #00e5ff;
+  border-radius:30px;
+  color:#00e5ff;
+  text-decoration:none;
+  font-size:16px;
+  margin-top:10px;
+}
+
+.rule-btn:hover{
+  background:#00e5ff;
+  color:#000;
+}
+
+.description{
+  margin-top:30px;
+  font-size:18px;
+  color:#ddd;
+}
+
+.sub-desc{
+  margin-top:10px;
+  color:#aaa;
+}
+
+.wrapper{
+  max-width:800px;
+  margin:40px auto;
+}
+
+.form-box{
+  background:rgba(255,255,255,0.05);
+  padding:40px;
+  border-radius:20px;
+  border:1px solid #00e5ff;
+  box-shadow:0 0 30px #00e5ff40;
+  text-align:left;
+}
+
+.input-group{
+  margin-bottom:18px;
+}
+
+label{
+  display:block;
+  margin-bottom:6px;
+  color:#00e5ff;
+}
+
+input, select{
+  width:100%;
+  padding:12px;
+  background:#111;
+  border:1px solid #00e5ff40;
+  border-radius:8px;
+  color:white;
+}
+
+input:focus, select:focus{
+  outline:none;
+  border:1px solid #00e5ff;
+}
+
+.qr-box, .upload-box, .step2, .success-box{
+  display:none;
+  margin-top:25px;
+  text-align:center;
+}
+
+.qr-box img{
+  width:220px;
+  margin-top:15px;
+  border-radius:12px;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  background:#00e5ff;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#00c8dd;
+}
+
+.contact-icons a{
+  display:inline-block;
+  margin:10px;
+  font-size:22px;
+  color:#00e5ff;
+  text-decoration:none;
+}
+
+.success-box h2{
+  color:#00ffcc;
+  font-family:'Orbitron';
+}
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablets */
+@media (max-width:1024px){
+
+  .wrapper{
+    width:90%;
+  }
+
+  .header h1{
+    font-size:40px;
+    letter-spacing:4px;
+  }
+
+}
+
+
+/* Mobile Devices */
+@media (max-width:768px){
+
+  .header{
+    padding-top:25px;
+  }
+
+  .header img{
+    width:120px;
+  }
+
+  .header h1{
+    font-size:28px;
+    letter-spacing:2px;
+  }
+
+  .description{
+    font-size:15px;
+    padding:0 15px;
+  }
+
+  .sub-desc{
+    font-size:13px;
+    padding:0 15px;
+  }
+
+  #countdown{
+    font-size:14px;
+  }
+
+  .wrapper{
+    width:95%;
+    margin:25px auto;
+  }
+
+  .form-box{
+    padding:20px 18px;
+    border-radius:15px;
+  }
+
+  label{
+    font-size:14px;
+  }
+
+  input, select{
+    padding:10px;
+    font-size:14px;
+  }
+
+  button{
+    padding:12px;
+    font-size:14px;
+  }
+
+  .qr-box img{
+    width:160px;
+  }
+
+  .contact-icons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+  }
+
+  .contact-icons a{
+    font-size:18px;
+    margin:0;
+  }
+
+  .success-box h2{
+    font-size:20px;
+  }
+
+}
+
+
+/* Extra Small Phones */
+@media (max-width:480px){
+
+  .header h1{
+    font-size:22px;
+  }
+
+  .form-box{
+    padding:15px;
+  }
+
+  input, select{
+    font-size:13px;
+  }
+
+  button{
+    font-size:13px;
+  }
+
+  .qr-box img{
+    width:140px;
+  }
+
+}
+
+
+
+
+
+</style>
+</head>
+
+<body>
+<video autoplay muted loop playsinline preload="auto">
+  <source src="images/SPACE MONATAGE.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="header">
+  <img src="images/synergy logo (2).png">
+  <h1>SYNERGY 2K26</h1>
+  <a href="images/SYNERGY'26_RULEBOOK (1).pdf" target="_blank" class="rule-btn">
+    <i class="fa-solid fa-book"></i> View Rule Book
+  </a>
+
+  <div class="description">
+    Complete the form carefully. Select package and make payment accordingly.
+  </div>
+  <div class="sub-desc">
+    Registration closes on March 1, 2026. Screenshot is mandatory for verification.
+  </div>
+  <div id="countdown" style="margin-top:15px;color:#00ffcc;font-size:18px;"></div>
+
+</div>
+
+<div class="wrapper">
+<div class="form-box">
+
+<form id="regForm">
+
+<div class="step1">
+
+<div class="input-group"><label>Full Name</label><input type="text" required></div>
+<div class="input-group"><label>Register Number</label><input type="text" required></div>
+<div class="input-group"><label>College Name</label><input type="text" required></div>
+<div class="input-group"><label>Department</label><input type="text" required></div>
+
+<div class="input-group">
+<label>Year</label>
+<select required>
+<option value="">Select Year</option>
+
+<option> II </option>
+<option> III </option>
+</select>
+</div>
+
+<div class="input-group"><label>Contact Number</label><input type="tel" required></div>
+<div class="input-group"><label>WhatsApp Number</label><input type="tel" required></div>
+<div class="input-group"><label>Email ID</label><input type="email" required></div>
+
+<div class="input-group">
+<label>Select Package</label>
+<select id="eventSelect" required>
+<option value="">Select Package</option>
+
+<option value="200">TECHNICAL + NON-TECHNICAL + PROJECT : ₹200</option>
+<option value="200">TECHNICAL + NON-TECHNICAL + PPT : ₹200</option>
+<option value="150">TECHNICAL + NON-TECHNICAL : ₹150</option>
+<option value="250">ALL EVENTS : ₹250</option>
+
+</select>
+
+</div>
+
+<div class="qr-box" id="qrBox">
+<h3>Scan & Pay</h3>
+<img id="qrImage" src="">
+<p id="amountText" style="margin-top:10px;color:#00e5ff;font-weight:600;"></p>
+</div>
+
+<div class="upload-box" id="uploadBox">
+<h3>Upload Payment Screenshot</h3>
+<input type="file" id="paymentFile" required>
+<button type="button" id="nextBtn">Next</button>
+</div>
+
+</div>
+
+<div class="step2">
+<h3>Connect With Us</h3>
+<div class="contact-icons">
+
+<a href="https://chat.whatsapp.com/Dw3qNug356zFx7g2Doc1yT" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.instagram.com/synergy__26" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="mailto:synergy26eee@gmail.com"><i class="fas fa-envelope"></i></a>
+
+<a href="tel:+917904972082"><i class="fas fa-phone"></i></a>
+<a href="tel:+919790531026"><i class="fas fa-phone"></i></a>
+<a href="tel:+918089089757"><i class="fas fa-phone"></i></a>
+<a href="tel:+919629124290"><i class="fas fa-phone"></i></a>
+<a href="tel:+916381992269"><i class="fas fa-phone"></i></a>
+
+</div>
+<button type="submit">Submit Registration</button>
+</div>
+
+<div class="success-box" id="successBox">
+  <h2>🎉 Registration Successful!</h2>
+  <p>Let's meet on March 3 at SYNERGY 2K26 🔥</p>
+  <p>Get ready to innovate, compete and conquer!</p>
+
+  <!-- WhatsApp Join Button -->
+  <a href="https://chat.whatsapp.com/Dw3qNug356zFx7g2Doc1yT " target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+  </a>
+
+</div>
+
+
+</form>
+</div>
+</div>
+
+<script>
+    const deadline = new Date("March 1, 2026 23:59:59").getTime();
+const now = new Date().getTime();
+
+if (now > deadline) {
+
+  document.querySelector("button[type='submit']").disabled = true;
+  document.querySelector("button[type='submit']").innerText = "Registration Closed";
+  document.querySelector("button[type='submit']").style.background = "gray";
+
+}
+
+
+const eventSelect = document.getElementById("eventSelect");
+const qrBox = document.getElementById("qrBox");
+const uploadBox = document.getElementById("uploadBox");
+const qrImage = document.getElementById("qrImage");
+const amountText = document.getElementById("amountText");
+const nextBtn = document.getElementById("nextBtn");
+
+eventSelect.addEventListener("change", function(){
+
+  let amount = this.value;
+
+  if(amount){
+
+    qrBox.style.display="block";
+    uploadBox.style.display="block";
+
+   if(amount == "150"){
+    qrImage.src = "images/QR150.jpeg";
+}
+else if(amount == "200"){
+    qrImage.src = "images/qr 200.jpeg";
+}
+else if(amount == "250"){
+    qrImage.src = "images/QR250.jpeg";
+}
+
+
+
+    amountText.innerText = "Pay ₹" + amount;
+
+  } else {
+
+    qrBox.style.display="none";
+    uploadBox.style.display="none";
+
+  }
+
+});
+
+nextBtn.addEventListener("click", function(){
+
+  const form = document.getElementById("regForm");
+  const file = document.getElementById("paymentFile");
+
+  if(form.checkValidity() && file.files.length > 0){
+    document.querySelector(".step1").style.display="none";
+    document.querySelector(".step2").style.display="block";
+  } else {
+    alert("Please fill all fields and upload payment screenshot.");
+  }
+
+});
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbwxurrU1oKv0h3WQQXnL7bKuTAtCINDUVUy26SZjYsbx0YWvqrNOpuU1MmEUplFMDNr7A/exec";
+
+document.getElementById("regForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const form = document.getElementById("regForm");
+  const fileInput = document.getElementById("paymentFile");
+  const file = fileInput.files[0];
+
+  if (!file) {
+    alert("Please upload payment screenshot.");
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = function() {
+
+    const formData = {
+      fullName: form.elements[0].value,
+      regNo: form.elements[1].value,
+      college: form.elements[2].value,
+      dept: form.elements[3].value,
+      year: form.elements[4].value,
+      contact: form.elements[5].value,
+      whatsapp: form.elements[6].value,
+      email: form.elements[7].value,
+      package: document.getElementById("eventSelect").value,
+      file: reader.result,
+      fileType: file.type
+    };
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: JSON.stringify(formData)
+    })
+    .then(res => res.text())
+    .then(response => {
+
+      if(response === "SUCCESS"){
+        document.querySelector(".step2").style.display="none";
+        document.getElementById("successBox").style.display="block";
+      }
+      else if(response === "DEADLINE_OVER"){
+        alert("Registration deadline is over.");
+      }
+      else if(response === "REGISTRATION_CLOSED"){
+        alert("Registration is closed by admin.");
+      }
+      else{
+        alert("Error submitting form.");
+      }
+
+    })
+    .catch(error => {
+      alert("Submission failed.");
+    });
+
+  };
+
+  reader.readAsDataURL(file);
+});
+
+const countDownDate = new Date("March 1, 2026 23:59:59").getTime();
+
+setInterval(function() {
+
+  const now = new Date().getTime();
+  const distance = countDownDate - now;
+
+  if (distance < 0) {
+    document.getElementById("countdown").innerHTML = "Registration Closed";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML =
+    "Registration closes in: " +
+    days + "d " + hours + "h " +
+    minutes + "m " + seconds + "s ";
+
+}, 1000);
+
+
+</script>
+
+</body>
+</html>
