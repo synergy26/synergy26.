@@ -438,8 +438,10 @@ button:hover{
 <a href="tel:+916381992269"><i class="fas fa-phone"></i></a>
 
 </div>
- <h3> Click the Submit Button once and wait for 5s to get confirmation.</h3>
-<button type="submit">Submit Registration</button>
+<button type="submit" id="submitBtn">Submit Registration</button>
+<p id="loadingText" style="display:none; color:#00ffcc; margin-top:10px;">
+Submitting... Please wait ⏳
+</p>
 </div>
 
 <div class="success-box" id="successBox">
@@ -530,6 +532,12 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbwxurrU1oKv0h3WQQXnL7
 document.getElementById("regForm").addEventListener("submit", function(e){
   e.preventDefault();
 
+const submitBtn = document.getElementById("submitBtn");
+const loadingText = document.getElementById("loadingText");
+
+submitBtn.disabled = true;
+submitBtn.innerText = "Submitting...";
+loadingText.style.display = "block";
   const form = document.getElementById("regForm");
   const fileInput = document.getElementById("paymentFile");
   const file = fileInput.files[0];
@@ -580,9 +588,13 @@ document.getElementById("regForm").addEventListener("submit", function(e){
       }
 
     })
-    .catch(error => {
-      alert("Submission failed.");
-    });
+  .catch(error => {
+  alert("Submission failed.");
+  submitBtn.disabled = false;
+  submitBtn.innerText = "Submit Registration";
+  loadingText.style.display = "none";
+});
+
 
   };
 
@@ -618,4 +630,3 @@ setInterval(function() {
 
 </body>
 </html>
-
