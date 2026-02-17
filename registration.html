@@ -493,35 +493,36 @@ const nextBtn = document.getElementById("nextBtn");
 
 eventSelect.addEventListener("change", function(){
 
-  let amount = this.value;
+  let selectedPackage = this.value;
 
-  if(amount){
+  if(selectedPackage){
 
-    qrBox.style.display="block";
-    uploadBox.style.display="block";
+    qrBox.style.display = "block";
+    uploadBox.style.display = "block";
 
-   if(amount == "150"){
-    qrImage.src = "images/QR150.jpeg";
-}
-else if(amount == "200"){
-    qrImage.src = "images/qr 200.jpeg";
-}
-else if(amount == "250"){
-    qrImage.src = "images/QR250.jpeg";
-}
-
-
-
-    amountText.innerText = "Pay ₹" + amount;
+    // Detect amount from package text
+    if(selectedPackage.includes("₹150")){
+      qrImage.src = "images/QR150.jpeg";
+      amountText.innerText = "Pay ₹150";
+    }
+    else if(selectedPackage.includes("₹200")){
+      qrImage.src = "images/qr 200.jpeg";
+      amountText.innerText = "Pay ₹200";
+    }
+    else if(selectedPackage.includes("₹250")){
+      qrImage.src = "images/QR250.jpeg";
+      amountText.innerText = "Pay ₹250";
+    }
 
   } else {
 
-    qrBox.style.display="none";
-    uploadBox.style.display="none";
+    qrBox.style.display = "none";
+    uploadBox.style.display = "none";
 
   }
 
 });
+
 
 nextBtn.addEventListener("click", function(){
 
@@ -537,7 +538,7 @@ nextBtn.addEventListener("click", function(){
 
 });
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbwxurrU1oKv0h3WQQXnL7bKuTAtCINDUVUy26SZjYsbx0YWvqrNOpuU1MmEUplFMDNr7A/exec";
+const scriptURL = "https://https://script.google.com/macros/s/AKfycbwzQ4EqpETkMO-Rryus_n7xHu6RvtZGPDA0V-vmsL3KPBQeUGQl9ZD7wLYc4MrKV3Uw/exec.google.com/macros/s/AKfycbwxurrU1oKv0h3WQQXnL7bKuTAtCINDUVUy26SZjYsbx0YWvqrNOpuU1MmEUplFMDNr7A/exec";
 
 document.getElementById("regForm").addEventListener("submit", function(e){
   e.preventDefault();
